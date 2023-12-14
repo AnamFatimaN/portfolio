@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --yellow:yellow;
+    --black:black;
+}
+/* header */
+header{
+    width: 100%;
+    background-color:var(--yellow);
+    background-position: center;
+    position: fixed;
+    z-index: 99;
+    
+}
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    
+
+}
+.logo{
+    font-size: 30px;
+    font-weight: bolder;
+    color:var(--black);
+}
+.logo::first-letter{
+    font-size: 40px;
+    outline-color:7px black;
+    color: rgb(36, 45, 146);
+    text-transform: uppercase;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+
+}
+nav ul li a{
+    color:black;
+    font-weight: bold;
+    font-size: larger;
+    
+}
+nav ul li a:hover{
+    text-decoration: underline
+}
+/* section1 */
+.sec1{
+    background-image:url(images/black-background.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    /* width: 100vw;
+    height: 100vh; */
+
+}
+.sec1 .flex{
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin: auto;
+    padding-top: 98px;
+    padding-bottom: 100px;
+
+}
+.sec1 h1{
+    padding-top: 100px;
+    color:white;
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.sec1 p{
+    padding-top: 50px;
+    color:var(--yellow);
+    font-size: 30px;
+    width: 70%;
+    font-weight: bolder;
+    word-spacing: 2px;
+}
+.container{
+    position: relative;
+}
+
+
+.container > .flex > div:first-child > a {
+    background-color:white;    
+    width: 100%;
+    text-align: center;
+    font-size: 1.56rem;
+    border: transparent;
+    text-transform: uppercase;
+        max-width: 321px;
+        border-radius: 55px;
+        margin-top: 12px;
+        font-weight: bold;
+        height: 43px;
+        display: inline-block;
+        padding-top: 10px;
+        color: black;
+    
+
+}
+.container > .flex > div:first-child > a:hover{
+    background-color: var(--yellow);
+}
+.container .flex .image img{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: 7px solid yellow;
+    border-radius: 10%;
+    height: 400px;
+    cursor: grab;
+}
+
+.container .flex .image img:hover{
+    transform: scale(1.25);
+}
+.container .socail{
+    position: absolute;
+    top: 40%;
+    left: 6%;
+    
+}
+.container .socail a i{
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    line-height: 70px;
+    color: var(--yellow);
+}
+.container .socail a i:hover{
+    transform: scale(2);
+
+}
+/* aboutme */
+
+.aboutme{
+    background-image:url(images/section2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.aboutme .container{
+    width: 80%;
+    margin: auto;
+    padding: 150px;
+}
+.aboutme h2{
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+    
+}
+.aboutme p{
+    color: var(--yellow);
+    font-size: 30px;
+    padding: 70px;
+}
+/* contact section */
+.sec2{
+    
+    height: 100vh;
+    background-color: var(--black);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.sec2::before{
+    content: "";
+    background-color:var(--yellow);
+    height: 100%;
+    width: 100%;
+    border-radius: 0 50%;
+}
+.sec2 h2{
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    2em Georgia,
+    serif;
+    
+}
+.sec2 h3{
+    
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    serif;
+}
+.sec2 .contact form{
+    position: absolute;
+    right: 20%;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    border: 3px solid yellow;
+    width: 50%;
+    background-color: black;
+}
+.sec2 .contact form input{
+    margin: 20px;
+    height: 34pt;
+
+    font-size:22px;
+    
+    border:4px solid yellow ;
+}
+.sec2 .contact form  textarea{
+    margin: 16px;
+
+    font-size: 20px;
+    padding: 5px;
+    border:4px solid yellow ;
+}
+.sec2 .contact form button{
+    align-self: self-start;
+    padding: 8px 10px;
+    background-color: black;
+    color: white;
+    border:3px solid white ;
+    margin: 5px;
+    cursor: grab;
+}
+.sec2 .contact form button:hover{
+background-color: var(--yellow);
+color: var(--black);
+}
