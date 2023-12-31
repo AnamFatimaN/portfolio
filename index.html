@@ -34,7 +34,7 @@
                     <img src="images/pic.jpg" alt="pic">
                    </div>
                 </div>
-                   <div class="socail">
+                   <div class="socail" id="socail">
                     <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
@@ -59,13 +59,20 @@
 
                 <h3>I like to create things with fun,open minded people....feel free to say hello!!</h3>
                 
-                <input type="text" placeholder="Name" name="name">
+                <input type="text" id="username" placeholder="Name" name="name" required>
                 <input type="email" placeholder="Email" name="email">
                 <!-- <input type="text"  placeholder="Please drop yout message here"> -->
                 <textarea placeholder="message here" rows="8"></textarea>
-                <button>send message</button>
+                <button type="button" onclick="showusername()">send message</button>
+                  
                   
                 </form>
+                <div id="wrapper">
+                    <div id="popup">
+                        <p id="popuptext"></p>
+                        <button id="closebutton">x</button>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -73,5 +80,6 @@
 
 
     <footer></footer>
+    <script src="script.js"></script>   
 </body>
 </html>

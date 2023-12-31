@@ -128,10 +128,17 @@ nav ul li a:hover{
     transform: scale(1.25);
 }
 .container .socail{
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: 6%;
+    z-index: 999;
+    padding:20px
     
+}
+.newsocail{
+    background-color: black; 
+    border-radius: 20px;
+    padding: 20px;
 }
 .container .socail a i{
     font-size: xx-large;
@@ -248,4 +255,31 @@ nav ul li a:hover{
 .sec2 .contact form button:hover{
 background-color: var(--yellow);
 color: var(--black);
+}
+#popup{
+    display: none;
+    position: fixed;
+            top: 50%;
+            left: 54%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
+            background-color: black;
+            border: 10px solid yellow;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            
+        }
+        #popuptext{
+            color: white;
+            font-size: larger;
+
+        }
+#wrapper{
+    position: relative;
+}
+#closebutton{
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    padding: 5px;
 }
