@@ -283,3 +283,9 @@ color: var(--black);
     right: 20px;
     padding: 5px;
 }
+.error{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+
+}
