@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <!-- header -->
     <header>
         <div class="container">
             <nav>
                 <span class="logo">anam</span>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="#aboutmepage">ABOUTME</a></li>
+                    <li><a href="#homepage" class="active">HOME</a></li>
+                    <li><a href="#aboutmepage">ABOUT</a></li>
+                    <li><a href="#projectspage"> PROJECTS</a></li>
+                    <li><a href="#servicespage">SERVICES</a></li>
                     <li><a href="#contactpage">CONTACT</a></li>
 
                 </ul>
@@ -22,7 +25,8 @@
         </div>
     </header>
     <main>
-        <section class="sec1">
+        <!-- home section -->
+        <section class="sec1" id="homepage">
             <div class="container">
                 <div class="flex">
                    <div class="intro">
@@ -44,6 +48,7 @@
             </div>
            
         </section>
+        <!-- aboutme section -->
         <section class="aboutme" id="aboutmepage">
             <div class="container">
                 <h2>"Nurturing Code and Family: The Full-Stack Journey of a Mom Developer."</h2>
@@ -52,20 +57,85 @@
                 
             </div>
         </section>
-        <section class="sec2" id="contactpage">
+        <!-- projects section -->
+        <section class="section3" id="projectspage">
+            <div class="container3">
+                <div class="heading">
+                    <h2>My latest projects</h2>
+                </div>
+                <div class="background">
+                    <div class="flex3">
+                        <div class="portfoliobox">
+                            <img src="images/image2.jpg" alt="portfolio1">
+                            <div class="overlay">
+                                <h4>WEB DESIGN</h4>
+                                <p>A captivating website on hicking as my final project</p>
+                                <a href=""><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                            </div>
+                    </div>
+                    <div class="portfoliobox">
+                        <img src="images/image2.jpg" alt="portfolio2">
+                        <div class="overlay">
+                            <h4>WEB DESIGN</h4>
+                            <p> A simple yet elegant website catering the demands of my client.</p>
+                            <a href="http://www.shaztechsolutions.com" target="_blank"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- services section -->
+        <section class="section4" id="servicespage">
+            <div class="container4">
+                <!-- <div class="heading">
+                    <h2>our services.</h2>
+                </div>     -->
+                    <div class="background">
+                        <div class="flex4">
+                        
+                        <article>
+                            <div>
+                                <i class="fa-solid fa-code"></i>
+                            <h3>WEB DEVELOPMENT</h3>
+                            <p>With a focus on innovation and user-centric design, I craft websites that not only impress but also deliver seamless experiences. </p>
+                            </div>
+                            </article>
+                        <article>
+                            <div>
+                                <i class="fa-solid fa-pen"></i>
+                                
+                            <h3>CONTENT CREATION</h3>
+                            <p>Unlock the power of words with a content creator dedicated to bringing your ideas to life.</p>
+                            </div>
+                            
+
+                        </article>
+                        
+                        <article>
+                            <div>
+                                <i class="fa-solid fa-network-wired"></i>
+                            <h3>SEO</h3>
+                            <p> Harness the power of strategic SEO techniques and watch your website soar to the top of search engine rankings, ensuring your brand gets the visibility it deserves.</p>
+                            </div>
+                        </article>
+                        </div>    
+            </div>
+        </section>    
+        <!-- contact section-->
+        <section class="sec5" id="contactpage">
             <div class="contact">
                 
                 <form id="form">
 
-                <h3>I like to create things with fun,open minded people....feel free to say hello!!</h3>
+                <h3>Get in touch with us!</h3>
                 
                 <input type="text" id="username" placeholder="Name" name="name" required>
                 <div class="error"></div>
-                <input type="email" id="email"placeholder="Email" name="email">
+                <input type="email" id="email"placeholder="Email" name="email" required>
                 <div class="error"></div>
-                <!-- <input type="text"  placeholder="Please drop yout message here"> -->
-                <textarea placeholder="message here" rows="8"></textarea>
-                <button type="send" id="button1" >send message</button>
+                
+                <textarea placeholder="Please drop your message here" rows="8"></textarea>
+                <button type="send" id="button1" >send</button>
                   
                   
                 </form>
@@ -80,8 +150,14 @@
         </section>
     </main>
 
-
-    <footer>
+<!-- footer -->
+    <footer class="footer">
+        <div class="footertext">
+            <p>Copyright &copy; 2024 by ANAM | All rights resreved</p>
+        </div>
+        <div class="footericon">
+            <a href="#homepage"><i class="fa-solid fa-circle-up"></i></a>
+        </div>
     </footer>
     <script src="script.js"></script>   
 </body>

@@ -4,10 +4,19 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 :root{
-    --yellow:yellow;
-    --black:black;
+    --yellow:#0ef;
+    --black:#1f242d;
+    --white:#fff;
+    --light:#323946;
+}
+body{
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    
 }
 /* header */
 header{
@@ -54,6 +63,9 @@ nav ul li a{
 nav ul li a:hover{
     text-decoration: underline
 }
+.active{
+    text-decoration: underline;
+}
 /* section1 */
 .sec1{
     background-image:url(images/black-background.gif);
@@ -62,8 +74,8 @@ nav ul li a:hover{
     background-repeat: no-repeat;
     padding-top: 100px;
     padding-bottom: 50px;
-    /* width: 100vw;
-    height: 100vh; */
+    
+    height: 100vh; 
 
 }
 .sec1 .flex{
@@ -96,7 +108,8 @@ nav ul li a:hover{
 
 
 .container > .flex > div:first-child > a {
-    background-color:white;    
+    background-color:var(--yellow);    
+    box-shadow: 0 0 1rem var(--yellow);
     width: 100%;
     text-align: center;
     font-size: 1.56rem;
@@ -104,21 +117,22 @@ nav ul li a:hover{
     text-transform: uppercase;
         max-width: 321px;
         border-radius: 55px;
-        margin-top: 12px;
+        margin-top: 44px;
         font-weight: bold;
         height: 43px;
         display: inline-block;
         padding-top: 10px;
-        color: black;
+        color:var(--black);
     
 
 }
 .container > .flex > div:first-child > a:hover{
-    background-color: var(--yellow);
+    box-shadow: none;
 }
 .container .flex .image img{
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    border: 7px solid yellow;
+    border: 7px solid var(--yellow);
+    box-shadow: 0 0 1rem var(--yellow) ;
     border-radius: 10%;
     height: 400px;
     cursor: grab;
@@ -136,7 +150,7 @@ nav ul li a:hover{
     
 }
 .newsocail{
-    background-color: black; 
+    background-color: var(--black); 
     border-radius: 20px;
     padding: 20px;
 }
@@ -146,6 +160,7 @@ nav ul li a:hover{
     flex-direction: column;
     line-height: 70px;
     color: var(--yellow);
+    transition: 0.5s ease;
 }
 .container .socail a i:hover{
     transform: scale(2);
@@ -158,6 +173,7 @@ nav ul li a:hover{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
 
 }
 
@@ -177,84 +193,190 @@ nav ul li a:hover{
     font-size: 30px;
     padding: 70px;
 }
+/* services section && projects section */
+.section4{
+    padding-top: 135px;
+    padding-bottom: 75px;
+}
+.section3 > div.container3 > div.heading,.section4 > div.container4 > div.heading{
+    font-size: 45px;
+    color: var(--white);
+    font-weight: bolder; 
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    }
+  .section3 > div.container3 > div.background,.section4 > div.container4 > div.background{
+    
+    background-image: url(images/image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    padding:100px;
+    border-radius: 50px;
+  }
+   .section4 > div.container4 > div.background{
+    background-image: url(images/images.jpeg);
+  } 
+   .section3 > div.container3 > div.background > div.flex3,.section4 > div.container4 > div.background > div.flex4{
+    display: flex;
+    justify-content: space-around;
+  
+  }
+  .section4 > div.container4 > div.background > div.flex4 > article{
+    flex-basis: 30%;
+    background-color:var(--light);
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 20px;
+    font-weight: bolder;
+    color: white; 
+    border: 2px solid var(--white); 
+    color:var(--yellow);
+  }
+  .section3 > div.container3 > div.background > div.flex3 > .portfoliobox{
+    border-radius: 10px;
+
+    position: relative;
+    display: flex; 
+    overflow: hidden;
+  }
+  .portfoliobox .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient( rgba(0, 0, 0, 0.1),var(--yellow));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translatey(100%);
+    transition: 0.5s ease;
+    
+  }
+  .overlay h4{
+  margin-bottom: 5px;
+  }
+  .overlay p{
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+  .overlay i{
+    font-size: 40px;
+    }
+  .portfoliobox:hover .overlay{
+    transform: translateY(0);
+  }
+  .overlay h4{
+    font-size: 30px;
+  }
+  .overlay p{
+    font-size: 15px;
+    margin:1px 0 1.5px;
+ }
+  .section3 > div.container3 > div.background > div.flex3 > .portfoliobox img{
+  width: 100%;
+  transition: .5s ease;
+}
+.portfoliobox:hover img{
+    transform: scale(1.1);
+}
+.section4 > div.container4 > div.background > div.flex4 > article > div > h3,.flex4 > article > h3{
+    font-size:30px;
+    vertical-align: middle;
+    color:var(--white);
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .section4 > div.container4 > div.background > div.flex4 > article > div > p,.flex4 > article > div > p{
+    line-height: 30px;
+    padding-top: 20px;
+    vertical-align: middle;
+  }
+  .section4 > div.container4 > div.background > div.flex4  article  i{
+    font-size: 50px;
+    
+  }
+  .section4 > div.container4 > div.background > div.flex4 > article  i:hover{
+      transform: scale(1.5);
+    }    
 /* contact section */
-.sec2{
+.sec5{
     
     height: 100vh;
-    background-color: var(--black);
+    background-color: var(--light);
     
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.sec2::before{
+.sec5::before{
     content: "";
     background-color:var(--yellow);
     height: 100%;
     width: 100%;
     border-radius: 0 50%;
 }
-.sec2 h2{
-    text-shadow:
-    1px 1px 2px black,
-    0 0 1em blue,
-    0 0 0.2em blue;
-  color: white;
-  font:
-    2em Georgia,
-    serif;
-    
-}
-.sec2 h3{
+
+.sec5 h3{
     
     text-shadow:
-    1px 1px 2px black,
+    /* 1px 1px 2px black,
     0 0 1em blue,
-    0 0 0.2em blue;
+    0 0 0.2em blue; */0 0 1rem var(--yellow) ;
   color: white;
-  font:
-    1.5em Georgia,
-    serif;
+  margin-left: 14px;
+  
 }
-.sec2 .contact form{
+.sec5 .contact form{
     position: absolute;
     right: 20%;
     top: 20%;
     display: flex;
     flex-direction: column;
     padding: 36px;
-    border: 3px solid yellow;
+    border: 3px solid var(--black);
     width: 50%;
-    background-color: black;
+    background-color:var(--light);
 }
-.sec2 .contact form input{
+.sec5 .contact form input{
     margin: 20px;
     height: 34pt;
 
-    font-size:22px;
+    font-size:20px;
     
-    border:4px solid yellow ;
+    border:4px solid var(--yellow);
+    box-shadow: 0 0 1rem var(--yellow);
 }
-.sec2 .contact form  textarea{
-    margin: 16px;
-
+.sec5 .contact form  textarea{
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     padding: 5px;
-    border:4px solid yellow ;
+    border:4px solid var(--yellow);
+    box-shadow: 0 0 1rem var(--yellow) ;
 }
-.sec2 .contact form button{
+.sec5 .contact form button{
     align-self: self-start;
     padding: 8px 10px;
-    background-color: black;
+    background-color: var(--yellow);
+    box-shadow:0 0 1rem var(--yellow) ;
     color: white;
-    border:3px solid white ;
-    margin: 5px;
+    font-size: 20px;
     cursor: grab;
+    border-radius: 20%;
+    margin-left: 20px;
 }
-.sec2 .contact form button:hover{
+.sec5 .contact form button:hover{
 background-color: var(--yellow);
-color: var(--black);
+box-shadow:0 0 1rem var(--yellow)  ;
 }
 #popup{
     display: none;
@@ -263,8 +385,8 @@ color: var(--black);
             left: 54%;
             transform: translate(-50%, -50%);
             padding: 80px;
-            background-color: black;
-            border: 10px solid yellow;
+            background-color: var(--black);
+            border: 10px solid var(--yellow);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             
@@ -285,7 +407,23 @@ color: var(--black);
 }
 .error{
     color: red;
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 5px;
-
+    margin-left: 21px;
+}
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    background-color: var(--light);
+    color: var(--yellow);
+    padding: 10px 15%;
+    font-size: 30px;
+}
+.footericon i{
+    color: var(--yellow);
+    
 }
