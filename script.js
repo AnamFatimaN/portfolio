@@ -30,7 +30,7 @@ function showusername(){
 function showPopUp(username) {
     var popUp = document.getElementById("popup");
     var popUpText = document.getElementById("popuptext");
-    popUpText.innerHTML="Hello! " +username+ "  Good to have you on board, We will get back to you shortly/";
+    popUpText.innerHTML="Hello! " +username+ "  Good to have you on board, We will get back to you shortly";
     popUp.style.display = "block";
 
     document.getElementById("closebutton").addEventListener("click",function(){
